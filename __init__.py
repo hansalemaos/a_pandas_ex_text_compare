@@ -5,9 +5,9 @@ from typing import Union
 import pandas as pd
 import regex
 from flatten_everything import flatten_everything
-from a_pandas_ex_bs4df import pd_add_bs4_to_df
+from a_pandas_ex_bs4df_lite import pd_add_bs4_to_df_lite
+pd_add_bs4_to_df_lite()
 
-pd_add_bs4_to_df()
 
 
 def open_text(text, encoding):
@@ -41,7 +41,7 @@ def get_text_difference(
     text2 = open_text(text2, encoding)
 
     htmla = difflib.HtmlDiff().make_file(text2, text1)
-    df = pd.Q_bs4_to_df(htmla.encode(), parser="lxml")
+    df = pd.Q_bs4_to_df_lite(htmla.encode(), parser="lxml")
     now = (
         pd.DataFrame(
             [
