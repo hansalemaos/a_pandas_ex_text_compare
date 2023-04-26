@@ -1,7 +1,7 @@
 # Compares 2 texts with each other, and returns a Pandas DataFrame
 
 ```python
-pip install a-pandas-ex_text-compare
+pip install  a-pandas-ex-text-compare
 ```
 
 ```python
